@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="AViewController" id="BYZ-38-t0r" customClass="AViewController" customModule="CustomPrsentingAndTransition" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,26 +19,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-OA-UvA">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="238" y="285" width="125" height="30"/>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="  SHOW DETAILS  "/>
                                 <connections>
-                                    <segue destination="11u-Rq-ZCQ" kind="presentation" id="BD5-Wv-y24"/>
+                                    <segue destination="11u-Rq-ZCQ" kind="presentation" modalPresentationStyle="pageSheet" modalTransitionStyle="coverVertical" id="BD5-Wv-y24"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.22352941334247589" blue="0.42352941632270813" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VPy-OA-UvA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B7a-KF-MOu"/>
                             <constraint firstItem="VPy-OA-UvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BDl-Zd-eHt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Vf8-JT-9Fx"/>
+                    <navigationItem key="navigationItem" title="HOME" id="Vf8-JT-9Fx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360" y="467"/>
         </scene>
-        <!--View Controller-->
+        <!--DETAIL-->
         <scene sceneID="ryz-px-bCh">
             <objects>
                 <viewController storyboardIdentifier="BViewController" id="gLd-TB-Lfg" customClass="BViewController" customModule="CustomPrsentingAndTransition" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,9 +50,29 @@
                     <view key="view" contentMode="scaleToFill" id="0ln-us-Atv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJv-RB-a6c">
+                                <rect key="frame" x="27" y="549" width="546" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bUM-Rw-Zed"/>
+                                </constraints>
+                                <state key="normal" title="Bottom Action Button">
+                                    <color key="titleColor" red="0.98039215800000001" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnButton:" destination="gLd-TB-Lfg" eventType="touchUpInside" id="Ecw-ty-oYI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bJv-RB-a6c" firstAttribute="leading" secondItem="0ln-us-Atv" secondAttribute="leadingMargin" constant="7" id="Fxj-r7-bQY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bJv-RB-a6c" secondAttribute="trailing" constant="7" id="QBf-Bj-tZD"/>
+                            <constraint firstItem="gsa-Z8-8Y1" firstAttribute="top" secondItem="bJv-RB-a6c" secondAttribute="bottom" constant="7" id="aYy-wW-KAa"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mZ5-6Y-qBx"/>
+                    <navigationItem key="navigationItem" title="DETAIL" id="mZ5-6Y-qBx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiq-ac-HEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

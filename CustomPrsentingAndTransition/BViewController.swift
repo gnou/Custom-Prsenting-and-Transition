@@ -27,6 +27,9 @@ class BViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didTapOnButton(sender: AnyObject) {
+        print("Tapped on bottom button")
+    }
 
     /*
     // MARK: - Navigation
